@@ -40,8 +40,9 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
+  <header id="header" class="fixed">
+    
+    <div class="container">
 
       <h1 class="logo"><a href="index.html"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -89,48 +90,9 @@
         <div class="col-xl-7 col-lg-9 text-center">
           <!-- <h1>Multi-behavior Learning for Socially Compatible Autonomous Driving</h1> -->
           <h1>Multi-behavior Learning for Socially Compatible Autonomous Driving</h1>
-          <h2>IEEE ITSC-2023</h2>
           
         </div>
       </div>
-      <!-- <div class="text-center">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div> -->
-
-      <!-- <div class="row icon-boxes">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-stack-line"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-palette-line"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-command-line"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
-          <div class="icon-box">
-            <div class="icon"><i class="ri-fingerprint-line"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-          </div>
-        </div>
-
-      </div> -->
     </div>
   </section><!-- End Hero -->
 
@@ -142,31 +104,20 @@
 
         <div class="section-title">
           <h2>Introduction</h2>
-          <p>In order to recognize and react
-            appropriately to the driving intentions of human drivers,
-            autonomous vehicles (AVs) must conduct extensive assessments.
-            The inability of AVs to recognize the signs of cooperation
-            offered by human drivers can have a negative effect on the
-            transportation system by causing safety and efficiency issues.
-            This study presents an architecture that integrates social psy-
-            chology factors into the framework of AVs in an effort to offer a
-            viable solution to this challenge. The main findings make use of
-            social value orientation (SVO), a method for predicting driving
-            behavior and evaluating the degree of cooperation among
-            human drivers. An architecture based on deep reinforcement
-            learning (DRL) with SVO integration was used to model social
-            compatibility among road agents while taking safety regulations
-            into consideration. To address the aforementioned concern, this
-            study creates an architecture capable of capturing motion-
-            controlling and socially compatible controls, performing well
-            in complex interaction scenarios, and operating in accordance
-            with the actions of other drivers. SVO integration proved to be
-            an effective method of improving motion. Furthermore, reward
-            training has a significant influence when compared to motion
-            control standards. </p>
+          <p>Autonomous vehicles (AVs) are poised to revolutionize transportation, but their effective integration into the
+real world necessitates addressing the challenge of interacting with human drivers. Real-world driving often involves negotiating and cooperating with fellow drivers through social cues.
+Successful deployment of AVs in the real world would thus require the AVs to also demonstrate such social compatibilities.
+Therefore, in this work, we look at the problem of enabling socially compatible driving when AV control policies are learned.
+We propose to leverage human driving data to learn a social preference model of human driving and then integrate it with reinforcement learning-based AV policy synthesis using Social
+Value Orientation (SVO) theory. We further propose to use multi-task reinforcement learning to learn diverse levels of
+socially compatible driving (ex: altruistic, prosocial, individualistic, and competitive). Focusing on highway driving scenarios,
+we demonstrate through experiments that socially compatible AV driving not only enables naturalistic driving behaviors
+but also enhances safety. Our findings reveal that without social compatibility, AV policies tend to adopt dangerously
+competitive driving behaviors, while the incorporation of social
+compatibility fosters smoother vehicle maneuvers. </p>
 
             <div class="d-flex justify-content-center">
-              <img src="assets/img/highway.jpeg" alt="Your Image" style="max-width: 100%; ; margin-top: 30px;" />
+              <img src="assets/img/rshhighwayNew.jpeg" alt="Your Image" style="max-width: 100%; ; margin-top: 30px;" />
             </div>
         </div>
 
@@ -198,7 +149,8 @@
                 <video controls>
                     <source src="assets/vids/Multitasking/openaigym.video.0.38501.video000035.mp4" type="video/mp4">
                 </video>
-                
+              <p style="font-size: 14px;">• Multi-behavior: Driving at a multitasking level to acquire various degrees of 
+                socially compatible driving under altruistic, prosocial, individualistic, and competitive preferences.</p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0">
               <h5> Non-social behavior</h5>
@@ -208,55 +160,62 @@
                 <video controls>
                   <source src="assets/vids/Base/openaigym.video.0.41500.video000022.mp4" type="video/mp4">
                 </video> 
+                <p style="font-size: 14px;">• Baseline (Non-social behavior): Only focusing on motion control policy. </p>
             </div>
           </div>
 
           <div class="row content" style="margin-top: 30px;">
             <div class="col-lg-6">
-              <h5> Learned alruistic social behavior </h5>
+              <h5> Learned alruistic-social behavior </h5>
                 <video controls>
                   <source src="assets/vids/Multitasking/openaigym.video.0.38501.video000007.mp4" type="video/mp4">
                 </video>
                 <video controls>
                     <source src="assets/vids/Multitasking/openaigym.video.0.38501.video000035.mp4" type="video/mp4">
                 </video>
-                
+                  <p style="font-size: 14px;">• Altrustic: The AV attempts to maximize the reward of
+the other drivers without considering its own outcomes.</p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0">
-              <h5> Learned prosocial social behavior</h5>
+              <h5> Learned prosocial-social behavior</h5>
                 <video controls>
                   <source src="assets/vids/Base/openaigym.video.0.41500.video000015.mp4" type="video/mp4">
                 </video>
                 <video controls>
                   <source src="assets/vids/Base/openaigym.video.0.41500.video000022.mp4" type="video/mp4">
                 </video> 
+                <p style="font-size: 14px;">• Prosocial: The AV attempts to maximize the group
+reward, factoring in both its own outcome and the
+outcomes of others.</p>
             </div>
           </div>
 
           <div class="row content" style="margin-top: 30px;">
             <div class="col-lg-6">
-              <h5> Learned individualistic social behavior </h5>
+              <h5> Learned individualistic-social behavior </h5>
                 <video controls>
                   <source src="assets/vids/Multitasking/openaigym.video.0.38501.video000007.mp4" type="video/mp4">
                 </video>
                 <video controls>
                     <source src="assets/vids/Multitasking/openaigym.video.0.38501.video000035.mp4" type="video/mp4">
                 </video>
-                
+                 <p style="font-size: 14px;">• Individualistic: When the AV attempts to maximize its own outcome disregarding other drivers' outcomes, the individualistic behavior is observed.</p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0">
-              <h5> Learned competitive social behavior</h5>
+              <h5> Learned competitive-social behavior</h5>
                 <video controls>
                   <source src="assets/vids/Base/openaigym.video.0.41500.video000015.mp4" type="video/mp4">
                 </video>
                 <video controls>
                   <source src="assets/vids/Base/openaigym.video.0.41500.video000022.mp4" type="video/mp4">
                 </video> 
+                <p style="font-size: 14px;">• Competitive: When the AV attempts to maximize its own relative gain over others, competitive behaviors can
+be observed.</p>
             </div>
           </div>
         </div>
 
-        <p style="  text-align: justify;
+        <p style=" text-align: justify;margin-top: 10px;
         margin-bottom: 0;
         font-size: 16px;"> As a baseline driving policy, we utilize the provided default Deep Q-Learning (DQN), which does not consider social compati-
         bility (Leurent, 2020). We modify the default MDP and make it socially compatible with our approach. To assess the social compatibility levels of the AV trained
@@ -271,7 +230,7 @@
                 overtaking event by the AV. The number of impacted
                 velocity cases is counted.</li>
               <li><i class="ri-check-double-line"></i> Braking impact (BI): This metric captures the breaking
-                changes of other vehicles caused by the AV’s actions.</li>
+                changes of other vehicles caused by the AV's actions.</li>
               <li><i class="ri-check-double-line"></i> Close gap front vehicle (CGF) and close-gap rear
                 vehicle (CGR): These two metrics captures the number of occurrences such that the AV is too close to the front
                 and rear vehicles.</li>
@@ -337,7 +296,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          <strong><span></span></strong> Last Edited: 18.05.2023
+          <strong><span></span></strong> Last Edited: 20.05.2023
         </div>
       </div>
 
